@@ -39,14 +39,12 @@ public class Car{
         return "Car Information \uD83D\uDE98:\n\uD83D\uDD39 The Car Code : "+getCode()+"\n"+route.DisplayInfo()+"\n\uD83D\uDD39 The Maximum Capacity: "+getMaxCapacity();
     }
 
-    public boolean CheckSeat(){
+    public void CheckSeat()throws Exception{
         if(maxCapacity>0){
             setMaxCapacity(maxCapacity-1);
             System.out.println("The Car Is Booked");
-            return true;
         }else{
-            System.out.println("The Car Is Full");
-            return false;
+            throw new Exception("The Car Is Full");
         }
 
     }

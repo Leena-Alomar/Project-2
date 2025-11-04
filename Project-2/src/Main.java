@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main{
-public static void main(String[] args) {
+public static void main(String[] args) throws Exception {
 
     Scanner input=new Scanner(System.in);
 
@@ -13,9 +13,14 @@ public static void main(String[] args) {
     Car car=new Car();
     car.setCode("1102");
     car.setRoute(route);
-    car.setMaxCapacity(4);
-    System.out.println("===============================================================");
-    System.out.println(car.DisplayInfo());
+    try{
+        car.setMaxCapacity(4);
+        System.out.println("===============================================================");
+        System.out.println(car.DisplayInfo());
+    } catch (Exception e) {
+        throw new RuntimeException(e);
+    }
+
 
 //    Passengers Objects
 
