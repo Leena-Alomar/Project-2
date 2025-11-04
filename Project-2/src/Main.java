@@ -55,7 +55,7 @@ public static void main(String[] args) throws Exception {
         p2.setID(id);
         p2.setReservedCar(car);
         car.CheckSeat();
-        p2.DisplayInfo();
+        p2.Reserved(car);
         System.out.println(p2.DisplayInfo());
     }else{
         System.out.println("Invalid Choice");
